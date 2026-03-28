@@ -117,7 +117,7 @@
         },
         {
             "type":"wmtheme",
-            "key":"{#35}├ ❁ Theme      ",
+            "key":"{#35}├╴❁ Theme      ",
         },
         {
             "type": "cursor",
@@ -126,7 +126,7 @@
         },
         {
             "type": "uptime",
-            "key": "{#35}└─ Uptime   ",
+            "key": "{#35}└  Uptime   ",
 
         },
 
@@ -148,7 +148,7 @@
         },
         {
             "type": "terminalfont",
-            "key": "{#35}└─ Font     ",
+            "key": "{#35}└  Font     ",
 
 
         },
@@ -166,7 +166,7 @@
         },
         {
             "type": "disk",
-            "key": "{#35}├🖸 Mnt      ",
+            "key": "{#35}├╴🖸 Mnt      ",
 
             "format": "{9}  -  {20}",
         },
@@ -207,7 +207,7 @@
 
         {
             "type": "battery",
-            "key": "{#35}└─ Battery  ",
+            "key": "{#35}└  Battery  ",
 
             "format": "{10} {4} ({5})"
         },
@@ -237,7 +237,7 @@
         },
         {
             "type": "sound",
-            "key": "{#35}└─╴󰋋 Sound    ",
+            "key": "{#35}└ 󰋋 Sound    ",
 
             "format": "{5} {3} ({2:20})"
         }
