@@ -1,0 +1,269 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+
+//LOGO-Fixed independent Hex Colors
+    "logo": {
+                "source": "$HOME/.config/fastfetch/logo.txt",
+                "padding": { "top": 1, "left": 2, "right": 0 },
+                "type": "builtin",
+                "height": 16,
+                "width": 28,
+                "color":   {
+                            "1":"#994242",                            //hex codes are independent of terminal defined colors
+                            "2":"#916c72",
+
+             //              "1":"magenta",
+             //              "2":"white",
+                                                                        //colors dependent on the colors defined in terminal config. For example magenta is color5 in kitty and color6 in konsole.
+                            },
+                "position":"right"
+            },
+
+
+//GLOBAL aesthetics
+
+    "display": {
+        "bar": {
+                    "char": {                               //character for loading bar
+                            "elapsed":"☐",
+                            "total": "☐"
+                            },
+                    "color": {                              //color of loading bar
+
+                       //    "border": "bright_magenta",
+                                                                //for some reason, bright_magenta acts as magenta on konsole for "bar" but has the same output on kitty and alacrity. They have different color rendering apparently. So if using Konsole, uncomment "bright magenta" and comment "magenta""
+                            "border": "magenta",
+                            "total": "white"
+                             },
+                    "width": 10
+               },
+
+        "percent": {
+            "type": 3,                  // type of percentage (bar/number etc)
+            "ndigits": 2                //decimal places following percentage
+                   },
+        "key": {
+            "width": 16                 //dist of output from key
+               },
+        "separator": "",                //separator between key and output
+        "color": {
+            "title": "#9e6f09",       //color of user profile (dirty yellow) or any string that uses [#title] as color
+            "output": "#FFC0CB",      //color of output (cherry blossom)
+
+                 }
+    },
+
+//MODULES
+    "modules": [
+        "break",
+        {
+            "type": "title",
+            "key": "  ",
+            "keyWidth": 4,
+            "keyColor": "magenta",
+            "color": {
+                "at": "magenta"
+                     }
+        },
+        {
+            "type": "datetime",
+            "key": " ",
+            "format": " 󰃮 {1}-{4}-{10} {14}:{18}:{20} ({22})"
+        },
+        "break",
+        {
+            "type": "custom",
+            "key": "{#35}System───────┬────────────────────────────────────────────────────",
+
+        },
+        {
+            "type": "host",
+            "key": "{#35}├╴󰌢 PC       │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "os",
+            "key": "{#35}├╴ OS       │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "wm",
+            "key": "{#35}├╴ WM       │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "lm",
+            "key": "{#35}├╴󰧨 LM       │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "kernel",
+            "key": "{#35}├╴ Kernel   │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "bios",
+            "key": "{#35}├╴ BIOS     │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "packages",
+            "key": "{#35}├╴󰏖 Packages │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "font",
+            "key": "{#35}├╴ Font     │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "cursor",
+            "key": "{#35}├╴󰆿 Cursor   │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "uptime",
+            "key": "{#35}├╴ Uptime   │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "command",
+            "key": "{#35}├╴󱦟 OS Age   │",
+            //  "keyColor": "magenta",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s);    days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╰────────────┴────────────────────────────────────────────────────",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╭─Terminal───┬────────────────────────────────────────────────────",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "shell",
+            "key": "{#35}├╴ Shell    │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "terminal",
+            "key": "{#35}├╴ Terminal │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "terminalfont",
+            "key": "{#35}├╴ Font     │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "terminalsize",
+            "key": "{#35}├╴󰘖 Size     │",
+            //  "keyColor": "magenta",
+            "format": "{1} colums × {2} rows ({3}px × {4}px)"
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╰────────────┴────────────────────────────────────────────────────",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╭─Disk───────┬────────────────────────────────────────────────────",
+
+        },
+        {
+            "type": "disk",
+            "key": "{#35}├╴ Space    │",
+            //  "keyColor": "magenta",
+            "format": "{13} {1} / {2} ({3})",
+        },
+        {
+            "type": "disk",
+            "key": "{#35}├╴ Mnt      │",
+            //  "keyColor": "magenta",
+            "format": "{9}  -  {20}",
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╰────────────┴────────────────────────────────────────────────────",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╭─Hardware───┬────────────────────────────────────────────────────",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "display",
+            "key": "{#35}├╴󰍹 Display  │",
+            //  "keyColor": "magenta",
+            "format": "{1}×{2}, {3}Hz [{7}]"
+        },
+        {
+            "type": "cpu",
+            "key": "{#35}├╴ CPU      │",
+            //  "keyColor": "magenta",
+            "format": "{1} [{3} cores]"
+        },
+        {
+            "type": "gpu",
+            "key": "{#35}├╴󰾲 GPU      │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "memory",
+            "key": "{#35}├╴ RAM      │",
+            //  "keyColor": "magenta"
+        },
+
+
+        {
+            "type": "battery",
+            "key": "{#35}├╴ Battery  │",
+            //  "keyColor": "magenta",
+            "format": "{10} {4} ({5})"
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╰────────────┴────────────────────────────────────────────────────",
+            //  "keyColor": "magenta"
+        },
+   //     {
+   //         "type": "colors",           //set colors automatically based on terminal ansi. Custom symbols like pacman cannot be used.
+   //         "key": "{#35}╭─Media──────┬─────────────────────────────────────────",
+   //         //  "keyColor": "magenta",
+   //         "symbol": "circle"
+   //      },
+        {
+          "type": "custom",
+          "key": "{#35}╭─Media──────┬{#33}󰮯 {#97}󰇘 󰇘 󰇘 󰇘 {#37}󰊠 {#32}󰊠 {#92}󰊠 {#31}󰊠 {#34}󰊠 {#30}󰊠 {#91}󰊠 {#35}────────────────────────────",
+                                                                //pacman colors in ansi because printf(),  colors not based on terminal ansi
+        },
+
+
+        {
+            "type": "media",
+            "key": "{#35}├╴ Playing  │",
+            //  "keyColor": "magenta",
+            "format": "\"{1}\" - {#1}{3}{#}"
+        },
+        {
+            "type": "player",
+            "key": "{#35}├╴󰥠 Player   │",
+            //  "keyColor": "magenta"
+        },
+        {
+            "type": "sound",
+            "key": "{#35}├╴󰋋 Sound    │",
+            //  "keyColor": "magenta",
+            "format": "{5} {3} ({2:20})"
+        },
+        {
+            "type": "custom",
+            "key": "{#35}╰────────────┴────────────────────────────────────────────────────",
+            //  "keyColor": "magenta"
+        }
+    ]
+}
