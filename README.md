@@ -18,8 +18,8 @@ add
 ``` 
 include ./Cherry_Blossom.conf 
 ```
-to kitty.conf in ```~/.config/kitty/``` 
+to ```kitty.conf``` in ```~/.config/kitty/``` 
 
 ### Fastfetch config
 
-copy config.jsonc to ~/.config/fastfetch/
+copy ```config.jsonc``` to ```~/.config/fastfetch/```
