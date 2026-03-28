@@ -11,7 +11,8 @@ git clone https://github.com/Neptune3013/Cherry-Blossom-Kitty-Fastfetch.git
 
 ### Kitty Terminal theme config
 
-Copy ``` Cherry_Blossom.conf``` into ```~/.config/kitty/``` <br>
+Copy ``` Cherry_Blossom.conf``` into ```~/.config/kitty/``` 
+
 (if the directory does not exist, open kitty terminal and presee ctrl+shift+F2, it will create the dir and the kitty.conf file)
 
 add 
@@ -22,4 +23,4 @@ to ```kitty.conf``` in ```~/.config/kitty/```
 
 ### Fastfetch config
 
-copy ```config.jsonc``` to ```~/.config/fastfetch/```
+copy ```config.jsonc``` into ```~/.config/fastfetch/```
