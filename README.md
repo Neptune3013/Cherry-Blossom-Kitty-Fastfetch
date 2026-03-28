@@ -1,5 +1,4 @@
-# Cherry-Blossom-Fastfetch
-Custom Kitty Terminal and Fastfetch config files for a Cherry Blossom Theme
+# Cherry Blossom theme for Fastfetch and Kitty Terminal
 <img width="1156" height="1002" alt="Screenshot_20260328_191804" src="https://github.com/user-attachments/assets/1b52d145-b642-4d2f-a49f-0e2c799eddb1" />
 (Note: the bg image is that of the desktop walpaper due to transparency of the terminal.)
 ## Download
