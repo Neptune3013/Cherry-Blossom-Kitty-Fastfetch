@@ -14,7 +14,7 @@
 
              //              "1":"magenta",
              //              "2":"white",
-                                                                        //colors dependent on the colors defined in terminal config. For example magenta is color5 in kitty and color6 in konsole.
+                                                                        //colors dependent on the colors defined in terminal config. For example magenta is color5 in kitty and color6 in konsole. To use ansi escape codes instead of strings add number in curly braces eg. "\e[35m" is "{35}"
                             },
                 "position":"right"
             },
@@ -28,13 +28,13 @@
                             "elapsed":"☐",
                             "total": "☐"
                             },
-                    "color": {                              //color of loading bar
+                    "color":{                              //color of loading bar
+                            "border": "35",                //35 is ansi escape code for magenta
+                            "total": "97"                  //97 is ansi for high intensity (bright) white
 
-                       //    "border": "bright_magenta",
-                                                                //for some reason, bright_magenta acts as magenta on konsole for "bar" but has the same output on kitty and alacrity. They have different color rendering apparently. So if using Konsole, uncomment "bright magenta" and comment "magenta""
-                            "border": "magenta",
-                            "total": "white"
-                             },
+                                                           //for some reason, bright_magenta acts as magenta on konsole for "bar" but has the same output on kitty and alacrity. They have different color rendering apparently. So it is safer to stick to ansi escape codes.
+
+                            },
                     "width": 10
                },
 
